@@ -302,7 +302,7 @@ const buildCardMatchById = (responseJson) => {
     const matchHTML = `
         <div class="card container card-detail-schedule center-align">
             <div class="card-image waves-effect waves-block waves-light">
-                <h6 class="league-name">${data.match.competition.name} - ${data.match.competition.area.name}</h6>
+                <h4 class="league-name">${data.match.competition.name} - ${data.match.competition.area.name}</h4>
                 <p>STATUS : ${data.match.status}</p>
             </div>
             <div class="card-content row">
@@ -851,6 +851,42 @@ const getSavedTeamById = () => {
          </div>
         `;
         document.getElementById("body-content").innerHTML = teamHTML;
+        const cardElement = document.querySelector('.card-detailteam');
+        const squadDivElement = document.createElement('div');
+        squadDivElement.className += 'row squad-team';
+        squadDivElement.innerHTML += `
+            <h4 class="center-align">Squad Teams</h4>
+        `;
+        cardElement.appendChild(squadDivElement);
+        
+        const squad = team.squad;
+        squad.forEach( player => {
+            const position = player.position;
+            if (position == null) {
+                playerPosition = 'no data';
+            } else {
+                playerPosition = position;
+            }
+
+            const role = player.role;
+            if (role == null) {
+                playerRole = 'no data';
+            } else if (role == 'COACH' || role == 'INTERIM_COACH' || role == 'ASSISTANT_COACH'){
+                playerRole = 'COACH';
+            } else {
+                playerRole = role;
+            }
+            const divSquadElement = document.querySelector('.squad-team');
+            const eachSquadElement = document.createElement('div');
+            eachSquadElement.className += 'item-squad col s6 m3';
+            eachSquadElement.innerHTML = ''
+            eachSquadElement.innerHTML += `
+                <h5 class="center-align">${player.name}</h5>
+                <p class="center-align">${playerPosition}</p>
+                <p class="center-align">${playerRole}</p>
+            `;
+            divSquadElement.appendChild(eachSquadElement);
+        })
     });
 };
 
