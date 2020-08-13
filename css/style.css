@@ -1,0 +1,725 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container{
+    flex: 1 0 auto;
+}
+
+.row {
+    margin-bottom: 0;
+}
+
+#body-content {
+    min-height: 700px;
+}
+
+@media only screen and (max-width: 600px) {
+    #preloader {
+        margin: 10px auto;
+        position: relative;
+        top: 0; 
+        left: 0; 
+        bottom: 0; 
+        right: 0;
+    }
+
+    .preloader-wrapper {
+        display: block;
+    }
+
+    #parallax-container {
+        line-height: 0;
+        height: auto;
+    }
+
+    .content-page {
+        min-height: 540px;
+    }
+
+    .home h1 {
+        font-size: 35px;
+        font-weight: 700;
+        margin-bottom: 0px;
+    }
+    .home .header {
+        font-weight: 700;
+    }
+    .home h2{
+        font-size: xx-large;
+        font-weight: 600;
+    }
+    .home h5{
+        font-size: larger;
+        letter-spacing: 1px;
+    }
+    .home .list-element{
+        box-shadow: 0px 10px 10px 0 #263238;
+        background-color: #7cb342;
+        color: ivory;
+        border-radius: 5px;
+    }
+
+    .home .list-element a{
+        color: #33691e;
+    }
+
+    .home .list-element h6.league-name{
+        font-weight: 600;
+        font-size: 18px;
+        padding-top: 10px;
+    }
+
+    .home .list-element h6{
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    .home .tab-render{
+        min-height: 400px;
+        background-color: #dcedc8;
+    }
+
+    .home .tabs .tab a{
+        color: #33691e;
+    }
+
+    .home .tabs .tab a.active{
+        color: #33691e;
+    }
+
+    table.standings th{
+        position: relative;
+        width: 15%;
+        text-align: start;
+    }
+    
+    table.standings th.team-name {
+        position: relative;
+        width: 55%;
+        text-align: start;
+    }
+
+    table.standings td{
+        position: relative;
+        width: 15%;
+        text-align: start;
+    }
+
+    table.standings td.team-name{
+        position: relative;
+        width: 55%;
+        text-align: start;
+    }
+
+    .home .league-buttons {
+        padding: 1rem 0rem;
+    }
+
+    .home .league-buttons .col {
+        margin: 1vw auto;
+        position: relative;
+        top: 0; 
+        left: 0; 
+        bottom: 0; 
+        right: 0;
+    }
+
+    .home .league-buttons .btn-league {
+        font-size: 14px;
+        width: 40vw;
+        background-color: #bf360c;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+    .modal-header {
+        text-align: right;
+        padding-top: 1rem;
+    }
+    .modal-header .modal-close h4{
+        color: #b71c1c;
+        font-weight: 700;
+    }
+
+    .home .content .modal-content {
+        padding: 10px;
+    }
+
+    .home .content .modal-content h6 a{
+        color: #5a9244;
+    }
+
+    .home .content .modal-content .btn-small {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home #matches {
+        padding: 10px 0 30px 0;
+        min-height: 200px;
+    }
+
+    .home .card-list .list-element {
+        padding: 1rem 0.75rem;
+    }
+
+    .home .card-list .list-element .vs {
+        color: #b71c1c;
+    }
+    
+    .teams h2{
+        font-size: 35px;
+        font-weight: 700;
+    }
+
+    .teams h6 {
+        font-weight: 600;
+        font-size: 18px;
+        margin-top: 2rem;
+    }
+
+    .index-banner .section {
+        background-image: url(../images/football-player.jpg);
+        background-repeat: repeat-x;
+        width: 100%;
+        top: 0;
+    }
+
+    .teams .list-element{
+        box-shadow: 0px 10px 10px 0 #263238;
+        background-color: #c5e1a5;
+        color: #000;
+        border-radius: 5px;
+        margin: 20px 0;
+    }
+
+    .teams .card-list {
+        position: relative;
+        display: inline-block;
+    }
+
+    .teams .list-element a{
+        color: #33691e;
+    }
+
+    .teams .list-element h4{
+        font-weight: 800;
+    }
+
+    .teams .img-element {
+        height: 80px;
+    }
+
+    .teams .img-team {
+        position: relative;
+        width: 30%;
+        height: inherit;
+        left: 0;
+        margin: 15px 0;
+    }
+
+    .card-detailmatches {
+        margin: 10px auto;
+        position: relative;
+        top: 0; 
+        left: 0; 
+        bottom: 0; 
+        right: 0;
+        box-shadow: 0px 10px 10px 0 #263238;
+        background-color: #dcedc8;
+        padding: 10px 0;
+    }
+
+    .card-detailmatches .card-content .card-title {
+        margin-top: 8px;
+        color: #b71c1c;
+    }
+
+    .card-detailmatches .card-content h4.team {
+        color: #b71c1c;
+        min-height: 50px;
+    }
+
+    .card-detailmatches .card-content h4.vs {
+        min-height: 50px;
+        color: red;
+    }
+
+    .card-detailteam {
+        margin: 10px auto;
+        position: relative;
+        top: 0; 
+        left: 0; 
+        bottom: 0; 
+        right: 0;
+        box-shadow: 0px 10px 10px 0 #263238;
+        background-color: #dcedc8;
+        padding: 10px 0;
+    }
+
+    .card-detailteam .card-content{
+        padding: 0 24px;
+    }
+
+    .card-detailteam .card-content .card-title {
+        margin-top: 8px;
+        color: #b71c1c;
+    }
+
+    .card-detailteam .card-content h4.team {
+        color: #b71c1c;
+        min-height: 50px;
+    }
+
+    .card-detailteam .card-content h4.vs {
+        min-height: 50px;
+        color: red;
+    }
+
+    .card-detailteam a{
+        font-size: larger;
+        font-weight: 800;
+    }
+
+    .card-detailteam .item-squad {
+        height: 125px;
+    }
+
+    .card-detailteam .item-squad h5{
+        color:  #5a9244;
+        font-weight: 700;
+    }
+
+    .card-detailteam .img-team {
+        position: relative;
+        height: 120px;
+        left: 33%;
+    }
+
+    .item-squad {
+        border: lightgreen 2px;
+    }
+
+    .item-squad h5{
+        font-size: 17px;
+        color:  #5a9244;
+        font-weight: 400;
+    }
+
+    .item-squad p{
+        font-size: 17px;
+        margin-block-start: 0.125em;
+        margin-block-end: 0.125em;
+    }
+
+    .card-detail-schedule {
+        left: 5%;
+        margin: 10px auto;
+        position: relative;
+        top: 0; 
+        left: 0; 
+        bottom: 0; 
+        right: 0;
+        box-shadow: 0px 10px 10px 0 #263238;
+        background-color: #dcedc8;
+        padding: 10px 0;
+    }
+
+    .img-bg {
+        min-height: 500px;
+        background-image: url(../images/clean-football.png);
+    }
+
+    .card-detail-schedule .card-content{
+        padding: 0 24px;
+    }
+
+    .card-detail-schedule .team {
+        min-height: 50px;
+        color: #b71c1c;
+    }
+
+    .card-detail-schedule .vs {
+        min-height: 50px;
+        color: red;
+    }
+
+    .card-detail-schedule h6{
+        font-weight: 700;
+    }
+
+    .no-saved-data {
+        height: 250px;
+    }
+
+    .about h2{
+        font-size: xx-large;
+        font-weight: 600;
+    }
+    .about h5{
+        font-size: larger;
+        font-weight: 600;
+        letter-spacing: 1px;
+    } 
+}
+
+@media only screen and (min-width: 601px) { 
+
+    nav {
+        position: relative;
+    }
+
+    .content-page {
+        min-height: 800px;
+    }
+
+    #parallax-container {
+        min-height: 200px;
+        line-height: 0;
+        height: auto;
+        background-image: url(../images/clean-football.png);
+        background-repeat: repeat-x;
+        background-blend-mode: screen;
+    }
+
+    #parallax-container .section h1{
+        color: black;
+        font-weight: 900;
+    }
+
+    #parallax-container .section h5{
+        color: black;
+    }
+
+    #list-standing .card-list {
+        position: relative;
+        display: inline-block;
+    }
+
+    #preloader {
+        margin: 10px auto;
+        position: relative;
+        top: 0; 
+        left: 0; 
+        bottom: 0; 
+        right: 0;
+    }
+
+    .preloader-wrapper {
+        display: block;
+    }
+
+    .home .league-buttons .btn-league {
+        font-size: 17px;
+        width: 15vw;
+        margin: 1vw 0;
+        background-color: #bf360c;
+        color: #fff;
+    }
+
+    .home .list-element{
+        box-shadow: 0px 10px 10px 0 #263238;
+        background-color: #7cb342;
+        color: ivory;
+        border-radius: 5px;
+        margin: 20px 0;
+        padding: 1rem 0.75rem;
+    }
+
+    .home .list-element a {
+        color: #33691e;
+    }
+
+    .home .list-element h4{
+        font-weight: 800;
+    }
+
+    .home .list-element h6{
+        font-weight: 600;
+        font-size: 25px;
+    }
+
+    .home .card-list .list-element .vs {
+        color: #b71c1c;
+    }
+
+    .home .list-element h6.league-name{
+        font-weight: 600;
+        font-size: 27px;
+        padding-top: 10px;
+    }
+
+    .home .tab-render{
+        min-height: 600px;
+        background-color: #dcedc8;
+    }
+
+    .home .tabs .tab a{
+        color: #33691e;
+    }
+
+    .home .tabs .tab a.active{
+        color: #33691e;
+    }
+
+    table.standings th{
+        position: relative;
+        width: 20%;
+        text-align: start;
+    }
+    
+    table.standings th.team-name {
+        position: relative;
+        width: 40%;
+        text-align: start;
+    }
+
+    table.standings td{
+        position: relative;
+        width: 20%;
+        text-align: start;
+    }
+
+    table.standings td.team-name{
+        position: relative;
+        width: 40%;
+        text-align: start;
+    }
+
+    .modal-header {
+        text-align: right;
+        padding-top: 1rem;
+    }
+
+    .modal-header .modal-close h4{
+        color: #b71c1c;
+        font-weight: 700;
+    }
+
+    .home .modal-content h5{
+        font-weight: 800;
+    }
+
+    .home .content .modal-content img{
+        height: 8rem;
+    }
+
+    .home .content .modal-content a{
+        color: #33691e;
+    }
+
+    .home .content .modal-content .btn-small {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+    }
+
+    .teams .list-element{
+        box-shadow: 0px 10px 10px 0 #263238;
+        background-color: #c5e1a5;
+        color: #000;
+        border-radius: 5px;
+        margin: 20px 0;
+    }
+
+    .teams .list-element a{
+        color: #33691e;
+    }
+
+    .teams .list-element h4{
+        font-weight: 800;
+    }
+
+    .teams .card-list {
+        position: relative;
+        display: inline-block;
+    }
+
+    .teams .list-element {
+        height: 375px;
+    }
+
+    .teams .img-element {
+        height: 200px;
+    }
+
+    .teams .img-team {
+        position: relative;
+        width: 40%;
+        height: inherit;
+        left: 0;
+    }
+
+    .card-detailteam .item-squad {
+        height: 175px;
+        border-color: lightgreen;
+    }
+
+    .card-detailteam .item-squad h5{
+        color:  #5a9244;
+        font-weight: 700;
+    }
+
+    .img-bg {
+        min-height: 500px;
+        background-image: url(../images/clean-football.png);
+    }
+
+    .img-bg .img-element {
+        padding: 2rem 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .card-detailteam {
+        margin: 10px auto;
+        position: relative;
+        top: 0; 
+        left: 0; 
+        bottom: 0; 
+        right: 0;
+        background-color: #dcedc8;
+        box-shadow: 0px 10px 10px 0 #263238;
+    }
+
+    .card-detailteam p{
+        font-size: large;
+    }
+
+    .card-detailteam a{
+        font-size: larger;
+        font-weight: 800;
+    }
+
+    .all-saved-teams .card-detailteam .img-element{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem 0.75rem;
+    }
+
+    .card-detailteam .img-team {
+        position: relative;
+        height: 175px;
+    }
+
+    .card-detailmatches {
+        margin: 10px auto;
+        position: relative;
+        top: 0; 
+        left: 0; 
+        bottom: 0; 
+        right: 0;
+        background-color: #dcedc8;
+        box-shadow: 0px 10px 10px 0 #263238;
+    }
+
+    .card-detailmatches .card-content .card-title {
+        margin-top: 8px;
+        color: #b71c1c;
+    }
+
+    .card-detailmatches .card-content h4.team {
+        color: #b71c1c;
+        min-height: 50px;
+    }
+
+    .card-detailmatches .card-content h4.vs {
+        min-height: 50px;
+        color: red;
+    }
+
+    .card-detail-schedule {
+        position: relative;
+        left: 15%;
+    }
+
+    .card-detail-schedule .team {
+        height: 50px;
+    }
+
+    .card-detail-schedule .vs {
+        height: 50px;
+        color: red;
+    }
+
+    .no-saved-data {
+        height: 250px;
+    }
+
+}
+
+nav i, nav i.material-icons {
+    display: inline;
+    font-size: 28px;
+}
+
+nav i.left{
+    margin-left: 15px;
+}
+
+li a.menu{
+    font-size: larger;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+#toast-container {
+    min-width: 10%;
+    top: 20%;
+    right: 50%;
+    transform: translateX(50%) translateY(50%);
+}
+
+.home img{
+    position: relative;
+    width: 100%;
+}
+
+.list-element a.team-detail{
+    color: #f1f8e9;
+}
+
+.match-standings .img-flag{
+    height: 150px;
+    width: auto;
+}
+
+#teams .team-card{
+    padding: 10px 5px;
+    background-color: #00897b;
+    color: #fff;
+    box-shadow: 2px 10px 10px 2px #263238;
+}
+
+#teams .team-card a{
+    color: #fff;
+}
+
+.teams{
+    position: relative;
+    width: 100%;
+}
+
+.teams img{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    margin: 5px 0;
+}

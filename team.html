@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Daily Match</title>
+    <meta name="description" content="Daily Football Match" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/images/icon.png">
+    <meta name="theme-color" content="#cff6cf"/>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+      <nav class="grey darken-3" role="navigation">
+        <div class="nav-wrapper container">
+          <a href="./index.html" class="brand-logo" id="logo-container">Daily Match</a>
+          <a href="./index.html" class="sidenav-trigger" data-target="nav-mobile">
+            <i class="material-icons">arrow_back</i>
+          </a>
+        </div>
+      </nav>
+    
+    <div class="img-bg">
+      <div class="container">
+        <div class="preloader-wrapper big active" id="preloader">
+            <div class="spinner-layer spinner-red-only">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div id="body-content"></div>
+      <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red" id="save">
+          <i class="large material-icons">save</i>
+        </a>
+      </div>
+    </div>
+
+    <footer class="page-footer grey darken-3">
+        <div class="footer-copyright grey darken-4">
+          <div class="container">
+          © 2020 Developed by Hanifa
+          </div>
+        </div>
+    </footer>
+
+    <script src="js/materialize.min.js"></script>
+    <script src="/main.js"></script>
+    <script src="js/data-source.js"></script>
+    <script src="js/idb.js"></script>
+    <script src="js/db.js"></script>
+    <script src="/js/detail-team.js"></script>
+</body>
+</html>
